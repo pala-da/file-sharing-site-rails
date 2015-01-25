@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<<h1>Megosztottak veled egy fájlt!</h1>
+<p>
+  <%= @kitol %> küldött neked egy fájlt. Valamint ezt az üzenetet fűzte hozzá: <br><br>
+  <%= @uzenet %> <br><br>
+  Ahhoz hogy letöltsd a fájlt ide kell kattintanod:
+  <%= link_to("Letöltés", "http://localhost:3000/download/download?url=#{@url}") %>
+</p><br>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<%= form_tag({:action => 'uploadFile'}, :multipart => true, :name => 'input') do %>
+      <p>
+        <label for="upload_file">Válassz ki egy fájlt</label>
+        <input id="upload_datafile" name="upload[datafile]" type="file" required>
+      </p>
+      <p><label for="email_recipient">Feladó </label>:
+        <input type="email" name="email[felado]" id="email_felado" class="form-control" placeholder="Valid email cím(nem kötelező)">
+      </p>
+      <p>
+        <label for="email_recipient">Címzett </label>:
+        <input type="email" name="email[cimzett]" id="email_cimzett" class="form-control" required placeholder="Valid email cím">
+      </p>
+      <p><label for="email_subject">Tárgy </label>:
+        <%= text_field 'email', 'targy', 'class' => 'form-control' %></p>
+      <p><label for="email_message">Üzenet </label>:
+        <%= text_area 'email', 'uzenet', 'class' => 'form-control' %></p>
+    <%= submit_tag "Upload", :class => 'btn btn-default' %>
+<% end %>
+<br>
